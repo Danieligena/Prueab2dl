@@ -42,13 +42,11 @@ $(document).ready(function(){
 		$('.text').val('');
 		$('.text').focus();
 		$('p.count').text('Quedan 140 caracteres');
-		var count_heart = $('span.count_heart').text();
-
-	})
+	});
 
 	$('.right').on('click', '.remove', function(){
 		$(this).parent().fadeOut(500);
-	})
+	});
 
 	$('.right').on('click', '.heart', function(){
 		$(this).addClass('likeable');
