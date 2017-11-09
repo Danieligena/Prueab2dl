@@ -3,7 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Prueba JS/JQuery</title>
+	<title>Fake a Tweet</title>
+
+	<!-- Header Font -->
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 
 	<!-- JQuery -->
 	<script
@@ -27,43 +30,59 @@
 	<script type="text/javascript" src="assets/js/main.js"></script>
 </head>
 <body>
+	<header class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 text-center banner">
+				<h1>Fake a Tweet</h1>
+			</div>
+		</div>
+	</header>
 	<section class="container-fluid">
 		<div class="row">
-			<div class="col-xs-12 col-sm-6 left">
+			<div class="col-xs-12 col-sm-5 left">
 				<div class="col-xs-4 col-xs-offset-4 col-sm-2 col-sm-offset-0">
 					<img class="img-responsive avatar" src="assets/img/avatar.jpg">
 				</div>
 				<div class="col-xs-12 col-sm-10">
 					<form>
 						<textarea class="text" maxlength="140" placeholder="¿Qué estás pensando?"></textarea>
-						<div class="count"><p>Quedan 140 caracteres</p></div>
+						<div><p class="count">Quedan 140 caracteres</p></div>
 				</div>
-				<div class="col-xs-12 col-md-2 col-md-offset-10">
+				<div class="col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-10">
 					<input class="button" type="submit" value="Tweet">
 					</form>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-12 col-sm-6 right">
+				<div class="col-xs-12 col-sm-5 col-sm-offset-1 right">
 					<div class="row tweet">
-						<h4>Nickname</h4>
+						<img class="img-responsive avatar_tweet" src="assets/img/avatar.jpg">
+						<h4>Kaiman</h4>
 						<div class="remove">
 							<span class="glyphicon glyphicon-remove"></span>
 						</div>
 						<div class="row"></div>
 						<div class="text_tweet">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</p>
 						</div>
-						<div>
-							<span class="glyphicon glyphicon-heart heart" aria-hidden="true">0</span>
+						<div class="heart">
+							<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+							<span class="count_heart">0</span>
 						</div>
 					</div>
 				</div>
 			</div>
 	</section>
+	<footer class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<h5>
+					Fake a Tweet - 2017
+					<br>
+					danieligena@gmail.com
+				</h5>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

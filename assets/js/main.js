@@ -8,10 +8,15 @@ $(document).ready(function(){
 	$('form').submit(function(e){
 		var name = ['Androide', 'Vegeta', 'Saiyajin', 'Ninja', 'Samurai', 'Piñera', 'Capitán', 'Dinosaurio'];
 		var name_random = name[Math.floor(Math.random() * name.length)];
-		var lastname = ['Del Futuro', 'Amatorio', 'Fitness', 'Bélico', 'Corpulento', 'Sensual', 'Obvio', 'Bandido'];
+		var lastname = ['Del Futuro', 'del Amor', 'Fitness', 'Bélico', 'Corpulento', 'Sensual', 'Obvio', 'Bandido'];
 		var lastname_random = lastname[Math.floor(Math.random() * lastname.length)];
+		var user = ['user1', 'user2', 'user3', 'user4', 'user5', 'user6', 'user7', 'user8'];
+		var user_random = user[Math.floor(Math.random() * user.length)];
 		var text = $('.text').val();
 		var part1 = '<div class="row tweet">'
+					+ '<img class="img-responsive avatar_tweet" src="assets/img/'
+					+ user_random
+					+ '.jpg">'
 					+ '<h4>'
 					+ name_random
 					+ ' '
@@ -27,12 +32,18 @@ $(document).ready(function(){
 			+ '<div class="text_tweet">'
 			+ '<p>'
 			+ text
-			+ '</p>'
+			+ '</p></div>'
+			+ '<div class="heart">'
+			+ '<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>'
+			+ '<span class="count_heart"> 0</span>'
 			+ '</div>'
-			+ '<span class="glyphicon glyphicon-heart heart" aria-hidden="true">0</span>'
 			);
 
 		$('.text').val('');
+		$('.text').focus();
+		$('p.count').text('Quedan 140 caracteres');
+		var count_heart = $('span.count_heart').text();
+
 	})
 
 	$('.right').on('click', '.remove', function(){
@@ -41,7 +52,8 @@ $(document).ready(function(){
 
 	$('.right').on('click', '.heart', function(){
 		$(this).addClass('likeable');
-		var like_num = parseInt($(this).text());
-		$(this).text(like_num + 1);
-	})
-})
+		var count_heart = $(this).children().last();
+		var num = parseInt(count_heart.text());
+		count_heart.text(num + 1);
+	});
+});
